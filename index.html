@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      margin: 5px 0;
+      background-color: #444;
+      border-radius: 5px;
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #555;
+    }
+
+    .main {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .card {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    @media (min-width: 999px) {
+      .sidebar {
+        width: 200px;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+      }
+
+      .sidebar a {
+        flex: 1;
+        margin: 0 5px;
+        padding: 10px;
+      }
+
+      .main {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dashboard</h1>
+  </header>
+
+  <div class="sidebar">
+    <a href="#">Home</a>
+    <a href="#">Analytics</a>
+    <a href="#">Reports</a>
+    <a href="#">Settings</a>
+    <a href="#">Profile</a>
+  </div>
+
+  <div class="main">
+    <div class="card">
+      <h3>Analytics Overview</h3>
+      <p>Data insights and key metrics will be displayed here.</p>
+    </div>
+    <div class="card">
+      <h3>Recent Activities</h3>
+      <p>A list of recent user activities or updates.</p>
+    </div>
+    <div class="card">
+      <h3>Notifications</h3>
+      <p>Latest alerts and system messages.</p>
+    </div>
+  </div>
+</body>
+</html>
